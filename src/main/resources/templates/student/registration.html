@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Евклид – онлайн-школа ЕГЭ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/styles/styles.css" th:href="@{/styles/styles.css}">
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+</head>
+
+<body>
+<section class="auth mt-5 d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mx-auto auth-content">
+                <div class="auth-title" style="text-align: left">Регистрация
+                    <div class="small" style="font-size: 14px">
+                        Все поля обязательны к заполнению
+                    </div>
+                </div>
+
+                <form method="post" action="#" th:action="@{/registration}" id="register-form" enctype="multipart/form-data">
+
+                    <div class="form-container">
+                        <label for="first_name">Имя</label>
+                        <input type="text" id="first_name" value="" name="first_name" autocomplete="nope">
+                    </div>
+
+                    <div class="form-container">
+                        <label for="last_name">
+                            Фамилия
+                        </label>
+                        <input type="text" id="last_name" value="" name="last_name" autocomplete="nope">
+                    </div>
+
+                    <div class="form-container">
+                        <label for="patronymic">
+                            Отчество
+                        </label>
+                        <input type="text" id="patronymic" value="" name="patronymic" autocomplete="nope">
+                    </div>
+
+                    <div class="form-container">
+                        <label for="email">
+                            Электронная почта
+                        </label>
+                        <input type="text" id="email" value="" name="email" inputmode="text">
+                    </div>
+
+                    <!--vk -->
+                    <div class="form-container" id="vk-input">
+                        <label for="vk">
+                            <span>ВКонтакте</span>
+                        </label>
+                        <input type="text" id="vk" value="" name="vk" data-test="vk" inputmode="text">
+                    </div>
+                    <!-- end vk -->
+
+                    <!--telephone number-->
+                    <div class="form-container" id="phone-input">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" value="" name="phone" placeholder="+7 (999) 999 99 99" autocomplete="off" inputmode="text">
+                    </div>
+                    <!-- end telephone number -->
+
+                    <!--login-->
+                    <div class="form-container" id="login-input">
+                        <label for="login">Логин</label>
+                        <input type="text" id="login" value="" name="login" placeholder="Придумайте логин" autocomplete="off" inputmode="text">
+                    </div>
+                    <!-- end login -->
+
+                    <div class="form-container">
+                        <label for="pswd">
+                            <span>Пароль</span>
+                        </label>
+                        <div id="pswd" class="password">
+                            <input type="password" id="password_input" placeholder="Введите пароль" name="password_input">
+                            <a href="#" class="password-control"></a>
+                        </div>
+                    </div>
+
+
+                    <div class="form-container custom-checkbox">
+                        <input type="checkbox" id="politic_checkbox" class="form-check-input register-permission">
+                        <label for="politic_checkbox">Согласен с <a href="https://storage.yandexcloud.net/net.umschool/media/%D0%A13_%D0%9F%D0%A3%D0%91%D0%9B%D0%98%D0%A7%D0%9D%D0%90%D0%AF_%D0%9E%D0%A4%D0%95%D0%A0%D0%A2%D0%90_%D0%BE%D1%82_03.03.22.pdf" class="link-orange">публичной офертой</a></label>
+                    </div>
+                    <div class="form-container custom-checkbox pb-4">
+                        <input type="checkbox" id="data_processing_checkbox" class="form-check-input register-permission">
+                        <label for="data_processing_checkbox">Согласен на обработку персональных данных и с <a href="https://storage.yandexcloud.net/net.umschool/media/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0_%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8_%D0%9F%D0%94_v3.docx_1.pdf" class="link-orange">политикой обработки персональных данных</a></label>
+                    </div>
+
+                    <button type="submit" name="action" class="btn btn-primary w-100">Зарегистрироваться</button>
+                    <div class="mb-5 mt-3">
+                    <a href="/home/" class="auth-link">Есть аккаунт? Войти</a>
+                    </div>
+
+                    <script type="text/javascript" src="../../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

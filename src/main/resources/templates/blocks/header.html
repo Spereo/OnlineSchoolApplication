@@ -1,0 +1,44 @@
+<div th:fragment="header">
+    <div class="fluid-container backingWhite">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-around py-3 mb-4">
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/home/" class="nav-link px-2 link-secondary">Главная</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Курсы</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Годовой план</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Чат</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end">
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Войти</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registrationModal">Регистрация</button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registrationModalLabel">Регистрация</h5>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Пожалуйста, выберите, в качестве кого вы хотели бы зарегистрироваться на нашей платформе</p>
+                                <form method="post" action="#" th:action="@{/registration}" id="register-form" enctype="multipart/form-data">
+                                    <div class="regButtons">
+                                        <button type="submit" name="action" th:value="student" class="btn btn-primary">Ученик</button>
+                                        <button type="submit" name="action" th:value="teacher" class="btn btn-primary">Преподаватель</button>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        </header>
+    </div>
+
+</div>
