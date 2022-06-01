@@ -11,8 +11,10 @@ public class RegistrationChoice {
     public String chooseReg(Model model, @RequestParam String action) {
         if(action.equals("student")) {
             return "redirect:/student/registration";
-        } else {
+        } else if(action.equals("teacher")){
             return "redirect:/teacher/registration";
+        } else {
+            return "redirect:/";
         }
     }
 }

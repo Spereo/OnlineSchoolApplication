@@ -104,17 +104,17 @@
                     <!-- end description -->
 
                     <div class="form-container custom-checkbox">
-                        <input type="checkbox" id="politic_checkbox" class="form-check-input register-permission">
+                        <input type="checkbox" id="politic_checkbox" class="form-check-input register-permission" onChange="$('.btn').attr('disabled',(!data_processing_checkbox.checked || !politic_checkbox.checked));">
                         <label for="politic_checkbox">Согласен с <a href="https://storage.yandexcloud.net/net.umschool/media/%D0%A13_%D0%9F%D0%A3%D0%91%D0%9B%D0%98%D0%A7%D0%9D%D0%90%D0%AF_%D0%9E%D0%A4%D0%95%D0%A0%D0%A2%D0%90_%D0%BE%D1%82_03.03.22.pdf" class="link-orange">публичной офертой</a></label>
                     </div>
                     <div class="form-container custom-checkbox pb-4">
-                        <input type="checkbox" id="data_processing_checkbox" class="form-check-input register-permission">
+                        <input type="checkbox" id="data_processing_checkbox" class="form-check-input register-permission" onChange="$('.btn').attr('disabled',(!data_processing_checkbox.checked || !politic_checkbox.checked));>
                         <label for="data_processing_checkbox">Согласен на обработку персональных данных и с <a href="https://storage.yandexcloud.net/net.umschool/media/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0_%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8_%D0%9F%D0%94_v3.docx_1.pdf" class="link-orange">политикой обработки персональных данных</a></label>
                     </div>
 
                     <button type="submit" name="action" class="btn btn-primary w-100">Зарегистрироваться</button>
                     <div class="mb-5 mt-3">
-                        <a href="/home/" class="auth-link">Есть аккаунт? Войти</a>
+                        <a href="/" class="auth-link">Есть аккаунт? Войти</a>
                     </div>
 
                     <script type="text/javascript" src="../../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>

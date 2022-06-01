@@ -47,6 +47,6 @@ public class RegistrationTeacher {
                 0,
                 "");
 
-        return "redirect:/home";
+        return "redirect:/";
     }
 }

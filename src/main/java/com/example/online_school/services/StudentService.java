@@ -11,13 +11,10 @@ import java.util.Calendar;
 
 @Service
 public class StudentService {
-    @Autowired
-    StudentRepo studentRepo;
-
-    @Autowired
-    ExamRepo examRepo;
 
     public void addStudent(
+            StudentRepo studentRepo,
+            ExamRepo examRepo,
             String name,
             String surname,
             String patronymic,
